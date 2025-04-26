@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Gaming Luka</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://res.cloudinary.com/dl167vevk/image/upload/v1742956989/Logo_frxeds.png" type="image/x-icon">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: rgba(0, 0, 70, 0.932);
+            text-align: center;
+            color: white;
+            font-family: sans-serif;
+        }
+
+        nav {
+            background: #33333394;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .download-btn {
+            margin-top: 50px;
+            cursor: pointer;
+        }
+
+        #click-count {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <img src="https://res.cloudinary.com/dl167vevk/image/upload/v1742956989/Logo_frxeds.png" alt="Logo" style="height: 40px;">
+    
+        <div style="display: flex; align-items: center; margin-left: auto;">
+            <a href="https://api.whatsapp.com/send/?phone=%2B94740850884&text&type=phone_number&app_absent=0" style="color: white; text-decoration: none; font-size: 20px;">Contact</a>
+            <img src="https://res.cloudinary.com/dl167vevk/image/upload/v1742956988/Contact_Icon_k4ug4g.png" alt="Contact Icon" style="height: 40px; margin-left: 10px;">
+        </div>
+    </nav>
+
+    <div style="display: flex; justify-content: center; margin-top: 50px;">
+        <img src="https://res.cloudinary.com/dl167vevk/image/upload/v1744293688/01_wghl0i.png" style="height: auto; max-width: 80%;" alt="Hack Image">
+    </div>
+
+    <div class="download-btn">
+        <img id="downloadImage" src="https://res.cloudinary.com/dl167vevk/image/upload/v1742956989/downlord_vwpu1i.png" style="height: 80px; max-width: 60%;" alt="Download Button">
+        <div id="click-count">Remaining Clicks: 3</div>
+    </div>
+
+    <script>
+        let clickCount = 0;
+        const downloadImage = document.getElementById('downloadImage');
+        const clickCountDisplay = document.getElementById('click-count');
+
+        downloadImage.addEventListener('click', () => {
+            clickCount++;
+            const remainingClicks = 3 - clickCount;
+            clickCountDisplay.innerText = `Remaining Clicks: ${remainingClicks >= 0 ? remainingClicks : 0}`;
+
+            if (clickCount === 1) {
+                window.open("https://www.profitableratecpm.com/xhuyg1bgy?key=f1e4061e8eeec34e96dfb93a14323ef0", "_blank");
+                // no redirect
+            }
+
+            else if (clickCount === 2) {
+                window.open("https://www.profitableratecpm.com/hr1kj7tq9?key=aea57422e350d6e8d0fef53b62fddaab", "_blank");
+                // no redirect
+            }
+
+            else if (clickCount === 3) {
+                window.location.href = "https://gaminglukaxz02.blogspot.com/";
+            }
+        });
+    </script>
+
+</body>
+</html>
