@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gaming Luka - File Download</title>
+  <link rel="icon" href="https://res.cloudinary.com/dl167vevk/image/upload/v1742956989/Logo_frxeds.png" type="image/x-icon"/>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: #0a0a23;
+      color: #f0f0f0;
+      font-family: "Segoe UI", sans-serif;
+      text-align: center;
+    }
+
+    nav {
+      background: #1e1e2e;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    nav a {
+      color: #f0f0f0;
+      text-decoration: none;
+      font-size: 18px;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #00d9ff;
+    }
+
+    .countdown {
+      font-size: 28px;
+      font-weight: bold;
+      margin-top: 40px;
+      color: #ffcb05;
+      animation: pulse 1s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+
+    #downloadBtn {
+      display: none;
+      opacity: 0;
+      margin-top: 20px;
+      transition: opacity 1s ease-in-out, transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    #downloadBtn:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <img src="https://res.cloudinary.com/dl167vevk/image/upload/v1742956989/Logo_frxeds.png" alt="Logo" style="height: 40px;">
+    <a href="https://api.whatsapp.com/send/?phone=%2B94740850884&text&type=phone_number&app_absent=0">Contact</a>
+    <img src="https://res.cloudinary.com/dl167vevk/image/upload/v1742956988/Contact_Icon_k4ug4g.png" alt="logo" style="height: 40px; margin-left: 10px;">
+  </nav>
+
+  <div>
+    <div class="countdown" id="countdown">00:09</div>
+    <a id="downloadBtn">
+      <img src="https://res.cloudinary.com/dl167vevk/image/upload/v1742956989/downlord_vwpu1i.png" style="height: 80px; max-width: 60%;" alt="Download">
+    </a>
+  </div>
+
+  <script>
+    let clickCount = 0;
+
+    function startCountdown(duration, display) {
+      let timer = duration;
+      const interval = setInterval(() => {
+        const seconds = timer < 10 ? "0" + timer : timer;
+        display.textContent = "00:" + seconds;
+
+        if (--timer < 0) {
+          clearInterval(interval);
+          display.style.display = "none";
+          const downloadBtn = document.getElementById("downloadBtn");
+          downloadBtn.style.display = "inline";
+          setTimeout(() => downloadBtn.style.opacity = 1, 100);
+        }
+      }, 1000);
+    }
+
+    window.onload = () => {
+      const countdownElement = document.getElementById("countdown");
+      startCountdown(9, countdownElement);
+    };
+
+    document.getElementById('downloadBtn').onclick = function() {
+      clickCount++;
+      if (clickCount === 1)
+        window.open("https://www.profitableratecpm.com/hr1kj7tq9?key=aea57422e350d6e8d0fef53b62fddaab", "_blank");
+      else if (clickCount === 2)
+        window.open("https://www.profitableratecpm.com/nwi2drh8w3?key=20e9d729aa4ffe7dafd6a7d948999137", "_blank");
+      else if (clickCount === 3)
+        window.open("https://www.profitableratecpm.com/xhuyg1bgy?key=f1e4061e8eeec34e96dfb93a14323ef0", "_blank");
+      else if (clickCount === 4)
+        window.location.href = "https://www.mediafire.com/file/cdrslm6bohvuud1/%25E0%25B6%2594%25E0%25B6%25B5_%25E0%25B6%25AF%25E0%25B7%2599%25E0%25B6%25BA%25E0%25B7%2592%25E0%25B6%25BA%25E0%25B7%258F__Sensitivity_100%2525_Working_%25F0%259F%2598%25B1.rar/file";
+    };
+  </script>
+
+</body>
+</html>

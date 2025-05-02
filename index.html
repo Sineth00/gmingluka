@@ -1,84 +1,106 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Gaming Luka</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="https://res.cloudinary.com/dl167vevk/image/upload/v1742956989/Logo_frxeds.png" type="image/x-icon">
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: rgba(0, 0, 70, 0.932);
-            text-align: center;
-            color: white;
-            font-family: sans-serif;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gaming Luka</title>
+  <link rel="icon" href="https://res.cloudinary.com/dl167vevk/image/upload/v1742956989/Logo_frxeds.png" type="image/x-icon" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-        nav {
-            background: #33333394;
-            padding: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
+    body {
+      margin: 0;
+      padding: 0;
+      background: #0f0f1a;
+      color: #f0f0f0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      text-align: center;
+    }
 
-        .download-btn {
-            margin-top: 50px;
-            cursor: pointer;
-        }
+    nav {
+      background: #1e1e2f;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
 
-        #click-count {
-            font-size: 18px;
-            margin-top: 10px;
-        }
-    </style>
+    nav a {
+      color: #f0f0f0;
+      text-decoration: none;
+      font-size: 18px;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #00d9ff;
+    }
+
+    .download-btn {
+      margin-top: 50px;
+      transition: transform 0.3s ease;
+    }
+
+    .download-btn:hover {
+      transform: scale(1.05);
+    }
+
+    #click-count {
+      margin-top: 10px;
+      font-size: 18px;
+      color: #a0a0a0;
+    }
+
+    .main-img {
+      margin-top: 50px;
+      animation: fadeIn 1.5s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
 </head>
 <body>
 
-    <nav>
-        <img src="https://res.cloudinary.com/dl167vevk/image/upload/v1742956989/Logo_frxeds.png" alt="Logo" style="height: 40px;">
-    
-        <div style="display: flex; align-items: center; margin-left: auto;">
-            <a href="https://api.whatsapp.com/send/?phone=%2B94740850884&text&type=phone_number&app_absent=0" style="color: white; text-decoration: none; font-size: 20px;">Contact</a>
-            <img src="https://res.cloudinary.com/dl167vevk/image/upload/v1742956988/Contact_Icon_k4ug4g.png" alt="Contact Icon" style="height: 40px; margin-left: 10px;">
-        </div>
-    </nav>
-
-    <div style="display: flex; justify-content: center; margin-top: 50px;">
-        <img src="https://res.cloudinary.com/dl167vevk/image/upload/v1744293688/01_wghl0i.png" style="height: auto; max-width: 80%;" alt="Hack Image">
+  <nav>
+    <img src="https://res.cloudinary.com/dl167vevk/image/upload/v1742956989/Logo_frxeds.png" alt="Logo" style="height: 40px;">
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <a href="https://api.whatsapp.com/send/?phone=%2B94740850884&text&type=phone_number&app_absent=0">Contact</a>
+      <img src="https://res.cloudinary.com/dl167vevk/image/upload/v1742956988/Contact_Icon_k4ug4g.png" alt="Contact Icon" style="height: 40px;">
     </div>
+  </nav>
 
-    <div class="download-btn">
-        <img id="downloadImage" src="https://res.cloudinary.com/dl167vevk/image/upload/v1742956989/downlord_vwpu1i.png" style="height: 80px; max-width: 60%;" alt="Download Button">
-        <div id="click-count">Remaining Clicks: 3</div>
-    </div>
+  <div class="main-img">
+    <img src="https://res.cloudinary.com/dl167vevk/image/upload/v1744293688/01_wghl0i.png" alt="Hack Image" style="max-width: 80%; height: auto;">
+  </div>
 
-    <script>
-        let clickCount = 0;
-        const downloadImage = document.getElementById('downloadImage');
-        const clickCountDisplay = document.getElementById('click-count');
+  <div class="download-btn">
+    <img id="downloadImage" src="https://res.cloudinary.com/dl167vevk/image/upload/v1742956989/downlord_vwpu1i.png" style="height: 80px; max-width: 60%;" alt="Download Button">
+    <div id="click-count">Remaining Clicks: 3</div>
+  </div>
 
-        downloadImage.addEventListener('click', () => {
-            clickCount++;
-            const remainingClicks = 3 - clickCount;
-            clickCountDisplay.innerText = `Remaining Clicks: ${remainingClicks >= 0 ? remainingClicks : 0}`;
+  <script>
+    let clickCount = 0;
+    const downloadImage = document.getElementById('downloadImage');
+    const clickCountDisplay = document.getElementById('click-count');
 
-            if (clickCount === 1) {
-                window.open("https://www.profitableratecpm.com/xhuyg1bgy?key=f1e4061e8eeec34e96dfb93a14323ef0", "_blank");
-                // no redirect
-            }
+    downloadImage.addEventListener('click', () => {
+      clickCount++;
+      const remaining = 3 - clickCount;
+      clickCountDisplay.textContent = `Remaining Clicks: ${remaining >= 0 ? remaining : 0}`;
 
-            else if (clickCount === 2) {
-                window.open("https://www.profitableratecpm.com/hr1kj7tq9?key=aea57422e350d6e8d0fef53b62fddaab", "_blank");
-                // no redirect
-            }
-
-            else if (clickCount === 3) {
-                window.location.href = "https://gaminglukaxz02.blogspot.com/";
-            }
-        });
-    </script>
+      if (clickCount === 1)
+        window.open("https://www.profitableratecpm.com/vm9ruvz7e?key=442fe4d232674315becf0051a655d975", "_blank");
+      else if (clickCount === 2)
+        window.open("https://www.profitableratecpm.com/xhuyg1bgy?key=f1e4061e8eeec34e96dfb93a14323ef0", "_blank");
+      else if (clickCount === 3)
+        window.location.href = "fsdfss.html";
+    });
+  </script>
 
 </body>
 </html>
